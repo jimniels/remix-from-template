@@ -1,4 +1,4 @@
-import { useLoaderData, useActionData } from "@remix-run/react";
+import { useActionData } from "@remix-run/react";
 import { json } from "@remix-run/server-runtime";
 
 export async function action({ request }) {
@@ -37,6 +37,13 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <form
+        method="post"
+        action="/?index"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <button type="submit">nice</button>
+      </form>
     </div>
   );
 }
